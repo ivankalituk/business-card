@@ -1,9 +1,12 @@
-import './App.css'
+import './shared/globals.css'
 
 function App() {
-
     return (
-        <div>afafa</div>
+        <div
+            className='bg-[red]'
+        >
+            afafa
+        </div>
     )
 }
 

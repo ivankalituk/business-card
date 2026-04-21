@@ -6,7 +6,13 @@ import '../shared/globals.css'
 
 const Layout: FC = () => {
     return(
-        <div>
+        <div 
+            className="
+                bg-background
+                color
+                min-h-[100dvh]
+            "
+        >
             <Header />
 
                 <main className="font-mono">

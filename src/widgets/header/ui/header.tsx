@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom'
 import '../../../shared/globals.css'
+import { LayoutLinks } from '../../../shared/ui/layoutLinks';
 
 const Header = () => {
-
-    const navLinks = [
-    { label: 'Home', path: '/' },
-    { label: 'Works', path: '/works' },
-    { label: 'About', path: '/about' },
-    ];
-
 
     return(
         <header
@@ -39,26 +33,7 @@ const Header = () => {
                 </span>
             </Link>
 
-            <div className="md:flex items-center gap-10">
-            {navLinks.map((link) => (
-                <Link
-                key={link.path}
-                to={link.path}
-                className={`relative text-sm font-medium tracking-wide transition-colors duration-300 py-2 group ${
-                    location.pathname === link.path
-                    ? 'text-foreground'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-                >
-                {link.label}
-                <span
-                    className={`absolute bottom-0 left-0 h-px bg-foreground transition-all duration-300 ${
-                    location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`}
-                />
-                </Link>
-            ))}
-            </div>
+            <LayoutLinks />
         </header>
     )
 }

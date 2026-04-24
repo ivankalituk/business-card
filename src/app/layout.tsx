@@ -17,7 +17,13 @@ const Layout: FC = () => {
         >
             <Header />
 
-                <main className="font-mono">
+                <main className="
+                    max-w-[1184px]
+                    w-[100%]
+                    px-[48px]
+                    mx-auto
+                    mb-[40px]
+                ">
                     <Outlet />
                 </main>
 

@@ -4,7 +4,7 @@ const Footer = () => {
     return(
         <footer
             className="
-                mt-[128px]
+                mt-[auto]
                 border-t-border
                 border-t-[1px]
             "

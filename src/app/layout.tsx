@@ -11,6 +11,8 @@ const Layout: FC = () => {
                 bg-background
                 color
                 min-h-[100dvh]
+                flex
+                flex-col
             "
         >
             <Header />

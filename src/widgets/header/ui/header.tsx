@@ -7,7 +7,7 @@ const Header = () => {
     return(
         <header
             className="
-                m-auto
+                mx-auto
                 my-0
                 h-[80px]
                 max-w-[1184px]

@@ -1,56 +1,59 @@
 import type { FC } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-// mock
 const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'Works', path: '/works' },
     { label: 'About', path: '/about' },
 ];
 
+const LayoutLinks: FC = () => {
+    const location = useLocation();
 
-const LayoutLinks: FC = () =>{
+    return (
+        <nav className="flex gap-[40px]">
+            {navLinks.map((link) => {
+                const isActive = location.pathname === link.path;
 
-    const location = useLocation()
-
-    return(
-        <nav
-            className="flex gap-[40px]"
-        >
-            {
-                navLinks.map((link) => (
-                    <Link 
+                return (
+                    <Link
+                        key={link.path}
                         to={link.path}
                         className={`
+                            group
                             relative
-                            flex flex-column
-                            font-inter
+                            inline-block
                             py-[8px]
-                            transition-colors duration-300
-                            hover:text-foreground
+                            font-inter
                             text-[14px]
                             leading-[20px]
-                            
-                            ${location.pathname === link.path? 'text-foreground' : 'text-mforeground'}
+                            transition-colors duration-300
+                            hover:text-foreground
+                            ${isActive ? 'text-foreground' : 'text-mforeground'}
                         `}
                     >
-                        <span>{link.label}</span>
+                        {link.label}
 
-                        {location.pathname === link.path && <span 
-                            className="
+                        <span
+                            className={`
                                 absolute
                                 left-[0px]
                                 bottom-[0px]
                                 h-[1px]
                                 w-full
                                 bg-foreground
-                            "
-                        />}
-                    </Link>
-                ))
-            }
-        </nav>
-    )
-}
 
-export default LayoutLinks
+                                origin-left
+                                transition-transform duration-250
+
+                                ${isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}
+                            `}
+                        />
+                    </Link>
+                );
+            })}
+        </nav>
+    );
+};
+
+export default LayoutLinks;

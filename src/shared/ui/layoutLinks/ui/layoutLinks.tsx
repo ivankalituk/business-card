@@ -8,7 +8,11 @@ const navLinks = [
     { label: 'About', path: '/about' },
 ];
 
-const LayoutLinks: FC = () => {
+interface Props {
+    underLines?: boolean
+}
+
+const LayoutLinks: FC <Props> = ({underLines}) => {
     const location = useLocation();
 
     return (
@@ -30,12 +34,12 @@ const LayoutLinks: FC = () => {
                             leading-[20px]
                             transition-colors duration-300
                             hover:text-foreground
-                            ${isActive ? 'text-foreground' : 'text-mforeground'}
+                            ${isActive ? 'text-foreground' : 'text-muted-foreground'}
                         `}
                     >
                         {link.label}
 
-                        <motion.span
+                        {underLines && <motion.span
                             className="
                                 absolute
                                 left-[0px]
@@ -59,7 +63,7 @@ const LayoutLinks: FC = () => {
                                 damping: 25,
                                 mass: 0.8,
                             }}
-                        />
+                        />}
                     </Link>
                 );
             })}

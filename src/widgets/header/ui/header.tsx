@@ -28,12 +28,12 @@ const Header = () => {
                         transition-transform duration-300
                     " 
                 />
-                <span className=" text-mforeground font-mono uppercase tracking-[0.2em] text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                <span className=" text-muted-foreground font-mono uppercase tracking-[0.2em] text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Portfolio
                 </span>
             </Link>
 
-            <LayoutLinks />
+            <LayoutLinks underLines/>
         </header>
     )
 }

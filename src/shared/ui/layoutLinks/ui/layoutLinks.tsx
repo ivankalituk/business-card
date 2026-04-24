@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const navLinks = [
     { label: 'Home', path: '/' },
@@ -34,20 +35,30 @@ const LayoutLinks: FC = () => {
                     >
                         {link.label}
 
-                        <span
-                            className={`
+                        <motion.span
+                            className="
                                 absolute
                                 left-[0px]
                                 bottom-[0px]
                                 h-[1px]
                                 w-full
                                 bg-foreground
-
                                 origin-left
-                                transition-transform duration-250
-
-                                ${isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}
-                            `}
+                                scaleX-0
+                            "
+                            initial={false}
+                            animate={{
+                                scaleX: isActive ? 1 : 0,
+                            }}
+                            whileHover={{
+                                scaleX: 1,
+                            }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 400,
+                                damping: 25,
+                                mass: 0.8,
+                            }}
                         />
                     </Link>
                 );

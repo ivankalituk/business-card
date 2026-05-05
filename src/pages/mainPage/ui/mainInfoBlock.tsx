@@ -1,6 +1,8 @@
 import type { FC } from "react";
 import { Button } from "../../../shared/ui/button";
 import { BorderedBlock } from "../../../shared/ui/borderedBlock";
+import { BorderedBlockCompany } from "../../../shared/ui/borderedBlockCompany";
+import { BorderedBlockHeading } from "../../../shared/ui/borderedBlockHeading";
 
 const MainInfoBlock: FC = () => {
     return(
@@ -69,17 +71,7 @@ const MainInfoBlock: FC = () => {
                 "
             >
                 <BorderedBlock className="flex-[3]">
-                    <div
-                        className="
-                            text-[12px]
-                            font-mono 
-                            uppercase tracking-[0.2em] 
-                            text-muted-foreground 
-                            mb-[16px]
-                        "
-                    >
-                        Background
-                    </div>
+                    <BorderedBlockHeading name="Background"/>
 
                     <div
                         className="
@@ -100,53 +92,11 @@ const MainInfoBlock: FC = () => {
                 </BorderedBlock>
                 
                 <BorderedBlock className="flex-[2]">
-                    <div
-                        className="
-                            text-[12px]
-                            font-mono 
-                            uppercase tracking-[0.2em] 
-                            text-muted-foreground 
-                            mb-[16px]
-                        "
-                    >
-                        Experience
-                    </div>
+                    <BorderedBlockHeading name = "Experience"/>
 
-                    <div 
-                        className="
-                            flex
-                            justify-between
-                            text-muted-foreground
-                            text-[12px]
-                            pb-[20px]
-                            border-b
-                            border-border
-                            last:border-b-0
-                            mt-[20px]
-                        "
-                    >
-                        <div
-                            className="
-                                flex flex-col
-                                gap-[6px]    
-                            "
-                        >
-                            <div
-                                className="
-                                    text-foreground
-                                    text-[14px]
-                                "
-                            >
-                                Senior Creative Developer
-                            </div>
-
-                            <div>
-                                Freelance
-                            </div>
-                        </div>
-
-                        <div className="font-mono">2023</div>
-                    </div>
+                    <BorderedBlockCompany />
+                    <BorderedBlockCompany />
+                    <BorderedBlockCompany />
                     
                 </BorderedBlock>
             </div>

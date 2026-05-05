@@ -25,6 +25,7 @@ const Button: FC<Props> = ({className, children, type, onClick}) => {
                 min-h-[46px]
                 px-[24px]
                 transition-colors duration-300
+                cursor-pointer
 
             `}
 

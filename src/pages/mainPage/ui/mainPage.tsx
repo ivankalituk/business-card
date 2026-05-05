@@ -1,10 +1,9 @@
-import { Button } from "../../../shared/ui/button"
+import MainInfoBlock from "./mainInfoBlock"
 
 const MainPage = () => {
     return(
         <div>
-            <Button type="WHITE">View Works</Button>
-            <Button type="BLACK">About Me</Button>
+            <MainInfoBlock />
         </div>
     )
 }

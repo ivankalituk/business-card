@@ -3,6 +3,7 @@ import { Button } from "../../../shared/ui/button";
 import { BorderedBlock } from "../../../shared/ui/borderedBlock";
 import { BorderedBlockCompany } from "../../../shared/ui/borderedBlockCompany";
 import { BorderedBlockHeading } from "../../../shared/ui/borderedBlockHeading";
+import { Tag } from "../../../shared/ui/tag";
 
 const MainInfoBlock: FC = () => {
     return(
@@ -88,7 +89,13 @@ const MainInfoBlock: FC = () => {
                         products that truly resonate.
                     </div>
 
-                    {/* <div className="text-foreground">TAG LIST</div> */}
+                    <div
+                        className="
+                            mt-[20px]
+                        "
+                    >
+                        <Tag name="REACT" />
+                    </div>
                 </BorderedBlock>
                 
                 <BorderedBlock className="flex-[2]">

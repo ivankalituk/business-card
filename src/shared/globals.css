@@ -5,6 +5,7 @@
 
 @theme {
     --color-background: #050505;
+    --color-card: #111111;
     --color-foreground: #f2f2f2;
     --color-muted-foreground: #a1a1a1;
     --color-border: #242424;
@@ -44,4 +45,25 @@ select {
 
 .no-select{
     user-select: none;
+}
+
+.vessel-shadow {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 8px 48px rgba(0, 0, 0, 0.3), 0 16px 64px rgba(0, 0, 0, 0.2);
+}
+
+.glass-border {
+  position: relative;
+}
+
+.glass-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }

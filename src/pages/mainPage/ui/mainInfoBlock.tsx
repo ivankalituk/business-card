@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { Button } from "../../../shared/ui/button";
+import { BorderedBlock } from "../../../shared/ui/borderedBlock";
 
 const MainInfoBlock: FC = () => {
     return(
@@ -59,6 +60,8 @@ const MainInfoBlock: FC = () => {
                 <Button type="WHITE">View Works</Button>
                 <Button type="BLACK">About Me</Button>
             </div>
+            
+            <BorderedBlock />
         </div>
     )
 }

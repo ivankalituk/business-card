@@ -3,7 +3,9 @@ import MainWorksBlock from "./mainWorksBlock"
 
 const MainPage = () => {
     return(
-        <div>
+        <div
+            className="pt-[128px] pb-[256px]"
+        >
             <MainInfoBlock />
             <MainWorksBlock />
         </div>

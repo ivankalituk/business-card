@@ -6,7 +6,11 @@ import { Link } from "react-router-dom";
 const MainWorksBlock: FC = () => {
     return(
 
-        <div>
+        <div
+            className="
+                mt-[64px]
+            "
+        >
             <div
                 className="
                     text-[12px] 

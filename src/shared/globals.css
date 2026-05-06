@@ -12,7 +12,7 @@
     --color-secondary: #1a1a1a;
     --font-inter: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
-
+    --size-xl: 16px;
 }
 
 *{

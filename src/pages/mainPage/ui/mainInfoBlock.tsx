@@ -9,7 +9,6 @@ const MainInfoBlock: FC = () => {
     return(
         <div
             className="
-                py-[128px]
                 flex flex-col
             "
         >

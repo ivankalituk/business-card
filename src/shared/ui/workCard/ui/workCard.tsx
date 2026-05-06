@@ -9,12 +9,10 @@ interface Props{
 }
 
 const WorkCard: FC <Props> = ({type}) =>{
-    console.log(type)
     
     return(
         <div
             className="
-                relative
                 text-foreground
                 aspect-[380/512]
                 max-w-[380px]
@@ -29,6 +27,7 @@ const WorkCard: FC <Props> = ({type}) =>{
         >
             <div
                 className="
+                    relative
                     overflow-hidden
                     aspect-[4/3]
                 "
@@ -37,12 +36,25 @@ const WorkCard: FC <Props> = ({type}) =>{
                     src={sampleImage} 
                     alt="workImage"
                     className="
+                        scale-101
                         aspect-[4/3]
                         w-[100%]
                         object-cover
                         overflow-hidden
                         transition-transform duration-700 group-hover:scale-105
                     " 
+                />
+
+                <div 
+                    className="
+                        absolute
+                        bottom-[0px]
+                        h-[30px]
+                        w-full
+                        bg-gradient-to-t
+                        from-card
+                        to-transparent
+                    "
                 />
             </div>
 
@@ -104,7 +116,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                     <Tag name="NEXT"/>
                 </div>
 
-                <div 
+                {type === 'SMALL' && <div 
                     className="
                         mt-[20px] 
                         flex items-center gap-[8px]
@@ -122,7 +134,12 @@ const WorkCard: FC <Props> = ({type}) =>{
                             group-hover:translate-x-[1px] group-hover:-translate-y-[1px]
                         " 
                     />
+                </div>}
+
+                {type === 'DETAILED' && <div>
+                    some code links
                 </div>
+                }
             </div>
         </div>
     )

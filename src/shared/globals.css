@@ -26,6 +26,46 @@ a{
     text-decoration: none;
 }
 
+html{
+    scrollbar-gutter: stable;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    background-color: #050505;
+
+    &.scroll-locked {
+        overflow-y: hidden;
+        touch-action: none;
+        -webkit-overflow-scrolling: auto;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: #393b3b transparent;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #393b3b;
+        border-radius: 4px;
+
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+
+        box-sizing: border-box;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+}
+
 input,
 button,
 textarea,

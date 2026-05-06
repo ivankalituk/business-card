@@ -4,6 +4,7 @@ import { BorderedBlock } from "../../../shared/ui/borderedBlock";
 import { BorderedBlockCompany } from "../../../shared/ui/borderedBlockCompany";
 import { BorderedBlockHeading } from "../../../shared/ui/borderedBlockHeading";
 import { Tag } from "../../../shared/ui/tag";
+import { ArrowRight } from "lucide-react";
 
 const MainInfoBlock: FC = () => {
     return(
@@ -60,7 +61,10 @@ const MainInfoBlock: FC = () => {
                     mb-[64px]
                 "
             >
-                <Button type="WHITE">View Works</Button>
+                <Button type="WHITE" className="flex gap-[8px]">
+                    View Works
+                    <ArrowRight className="w-[16px] h-[16px]" />
+                </Button>
                 <Button type="BLACK">About Me</Button>
             </div>
             

@@ -1,4 +1,6 @@
 import avatar from '../../../shared/assets/images/avatarSample.png'
+import { BigHeading } from '../../../shared/ui/bigHeading'
+import { SmallHeading } from '../../../shared/ui/smallHeading'
 
 const AboutPage = () => {
     return(
@@ -47,8 +49,13 @@ const AboutPage = () => {
                     h-[2000px]
                 "
             >
-                <div>About</div>
-                <div>Ivan Kalitiuk</div>
+                <SmallHeading className='mb-[16px]'>
+                    About
+                </SmallHeading>
+
+                <BigHeading className='mb-[24px] text-[60px]'>
+                    Ivan Kalitiuk
+                </BigHeading>
             </div>
 
 

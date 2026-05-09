@@ -7,6 +7,7 @@ import { Tag } from "../../../shared/ui/tag";
 import { ArrowRight } from "lucide-react";
 import { SmallHeading } from "../../../shared/ui/smallHeading";
 import { BigHeading } from "../../../shared/ui/bigHeading";
+import { SecondaryText } from "../../../shared/ui/secondaryText";
 
 const MainInfoBlock: FC = () => {
     return(
@@ -23,18 +24,9 @@ const MainInfoBlock: FC = () => {
                 Ivan Kalitiuk
             </BigHeading>
 
-            <span
-                className="
-                    text-muted-foreground
-                    font-inter
-                    text-[20px]
-                    mb-[40px]
-                    max-w-[600px]
-                    leading-[28px]
-                "
-            >
+            <SecondaryText className="max-w-[600px] mb-[40px]">
                 Crafting digital experiences at the intersection of design and engineering
-            </span>
+            </SecondaryText>
 
             <div
                 className="

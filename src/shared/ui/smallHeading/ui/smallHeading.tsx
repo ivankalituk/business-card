@@ -1,4 +1,5 @@
 import type { FC, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface Props {
     children: ReactNode
@@ -8,16 +9,14 @@ interface Props {
 const SmallHeading: FC <Props> = ({children, className}) =>{
     return (
         <div
-            className={`
-                ${className}
-
+            className={twMerge(`
                 text-muted-foreground
                 uppercase
                 font-mono
                 tracking-[0.25em]
                 text-[12px]
                 leading-[1rem]
-            `}
+            `, className)}
         >
             {children}
         </div>

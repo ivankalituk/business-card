@@ -2,6 +2,8 @@ import type { FC } from "react";
 import { WorkCard } from "../../../shared/ui/workCard";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SmallHeading } from "../../../shared/ui/smallHeading";
+import { BigHeading } from "../../../shared/ui/bigHeading";
 
 const MainWorksBlock: FC = () => {
     return(
@@ -11,35 +13,19 @@ const MainWorksBlock: FC = () => {
                 mt-[64px]
             "
         >
-            <div
-                className="
-                    text-[12px] 
-                    uppercase 
-                    tracking-[0.2em] 
-                    text-muted-foreground
-                    font-mono
-                    mb-[12px]
-                "
-            >
+
+            <SmallHeading className="tracking-[0.2em] mb-[12px]">
                 SELECTED WORKS
-            </div>
+            </SmallHeading>
 
             <div
                 className="
                     flex justify-between
                 "
             >
-                <div
-                    className="
-                        mb-[48px]
-                        text-[48px] 
-                        font-[700]
-                        tracking-tight 
-                        text-foreground
-                    "
-                >
+                <BigHeading className="mb-[48px] text-[48px] tracking-tight ">
                     Featured Projects
-                </div>
+                </BigHeading>
 
                 <Link
                     to='/works'

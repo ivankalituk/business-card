@@ -1,4 +1,5 @@
 import type { FC, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface Props{
     children?: ReactNode
@@ -9,16 +10,14 @@ interface Props{
 const BorderedBlock: FC <Props> = ({children, className}) => {
     return(
         <div
-            className={`
-                ${className}
-
+            className={twMerge(`
                 w-[100%]
                 p-[32px]
                 bg-card
                 rounded-[16px]
                 glass-border 
                 vessel-shadow 
-            `}
+            `, className)}
         >
             {children}
         </div>

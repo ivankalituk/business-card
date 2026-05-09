@@ -1,3 +1,5 @@
+import { BigHeading } from "../../../shared/ui/bigHeading"
+import { SmallHeading } from "../../../shared/ui/smallHeading"
 import { WorkCard } from "../../../shared/ui/workCard"
 
 const WorksPage = () => {
@@ -6,30 +8,13 @@ const WorksPage = () => {
             className="pt-[128px] pb-[208px]"
         >
             <div>
-                <div
-                    className="
-                        font-mono
-                        text-muted-foreground
-                        text-[12px]
-                        tracking-[0.2em]
-                        uppercase
-                        mb-[12px]
-                    "
-                >
+                <SmallHeading className="mb-[12px]">
                     Archive
-                </div>
+                </SmallHeading>
 
-                <div
-                    className="
-                        font-inter
-                        text-foreground
-                        text-[48px]
-                        font-[700]
-                        mb-[20px]
-                    "
-                >
+                <BigHeading className="text-[48px]">
                     All Works
-                </div>
+                </BigHeading>
 
                 <div
                     className="

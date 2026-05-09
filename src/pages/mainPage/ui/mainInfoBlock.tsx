@@ -5,6 +5,8 @@ import { BorderedBlockCompany } from "../../../shared/ui/borderedBlockCompany";
 import { BorderedBlockHeading } from "../../../shared/ui/borderedBlockHeading";
 import { Tag } from "../../../shared/ui/tag";
 import { ArrowRight } from "lucide-react";
+import { SmallHeading } from "../../../shared/ui/smallHeading";
+import { BigHeading } from "../../../shared/ui/bigHeading";
 
 const MainInfoBlock: FC = () => {
     return(
@@ -13,33 +15,13 @@ const MainInfoBlock: FC = () => {
                 flex flex-col
             "
         >
-            <span
-                className="
-                    text-muted-foreground
-                    uppercase
-                    font-mono
-                    tracking-[0.25em]
-                    text-[12px]
-                    leading-[1rem]
-                    mb-[24px]
-                "
-            >
+            <SmallHeading className="mb-[24px]">
                 junior fullstack developer
-            </span>
+            </SmallHeading>
 
-            <span
-                className="
-                    text-foreground
-                    font-inter
-                    text-[96px]
-                    font-[700]
-                    tracking-tight
-                    leading-[0.95]
-                    mb-[32px]
-                "
-            >
+            <BigHeading className="mb-[32px]">
                 Ivan Kalitiuk
-            </span>
+            </BigHeading>
 
             <span
                 className="

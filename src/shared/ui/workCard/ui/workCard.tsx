@@ -141,6 +141,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                 {type === 'DETAILED' && <div className="flex gap-[8px] mt-[20px]">
                     <DetailedCardLink type='LINK' link="/"/>
                     <DetailedCardLink type='TEXT' link="/"/>
+                    <DetailedCardLink type='GITHUB' link="/"/>
                 </div>
                 }
             </div>

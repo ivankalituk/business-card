@@ -21,7 +21,6 @@ const AboutPage = () => {
             <div
                 className="
                     flex-[2]
-                    h-[2000px]
                 "
             >
 

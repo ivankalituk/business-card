@@ -7,6 +7,10 @@ const Header = () => {
     return(
         <header
             className="
+                z-100
+                sticky
+                top-[0px]
+                bg-background/80 backdrop-blur-[16px]
                 mx-auto
                 my-0
                 h-[80px]

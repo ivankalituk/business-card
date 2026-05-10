@@ -7,7 +7,7 @@ const AboutPageLeft: FC = () => {
             className="
                 max-w-[300px]
                 sticky
-                top-[60px]
+                top-[100px]
                 self-start
             "
         >

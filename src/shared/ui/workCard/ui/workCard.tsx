@@ -17,6 +17,7 @@ const WorkCard: FC <Props> = ({type}) =>{
     return(
         <div
             className={twMerge(`
+                flex flex-col
                 text-foreground
                 aspect-[380/512]
                 w-[100%]
@@ -86,6 +87,8 @@ const WorkCard: FC <Props> = ({type}) =>{
             <div
                 className="
                     p-[32px]
+                    flex flex-col
+                    flex-1
                 "
             >
                 <div
@@ -109,8 +112,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                 <div
                     className="
                         mt-[20px]
-                        flex
-                        gap-[8px]
+                        flex gap-[8px]
                     "
                 >
                     <Tag name="REACT"/>
@@ -138,7 +140,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                     />
                 </div>}
 
-                {type === 'DETAILED' && <div className="flex gap-[8px] mt-[20px]">
+                {type === 'DETAILED' && <div className="flex gap-[8px] mt-[20px] mt-auto">
                     <DetailedCardLink type='LINK' link="/"/>
                     <DetailedCardLink type='TEXT' link="/"/>
                     <DetailedCardLink type='GITHUB' link="/"/>

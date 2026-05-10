@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { SmallHeading } from "../../../shared/ui/smallHeading";
 import { BorderedBlock } from "../../../shared/ui/borderedBlock";
+import { BoardedBlockTimedContent } from "../../../shared/ui/boardedBlockTimedContent";
 
 const AboutPageEducation: FC = () => {
     return(
@@ -10,7 +11,11 @@ const AboutPageEducation: FC = () => {
             </SmallHeading>
 
             <BorderedBlock>
-                some content
+                <BoardedBlockTimedContent
+                    heading="B.S. Computer Science"
+                    date="2023 — 2026"
+                    secondHeading="Unknown University"
+                />
             </BorderedBlock>
         </div>
     )

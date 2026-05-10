@@ -1,8 +1,7 @@
 import type { FC } from "react";
 import { Button } from "../../../shared/ui/button";
-import { BorderedBlock } from "../../../shared/ui/borderedBlock";
+import { BorderedBlock, BorderedBlockHeading } from "../../../shared/ui/borderedBlock";
 import { BorderedBlockCompany } from "../../../shared/ui/borderedBlockCompany";
-import { BorderedBlockHeading } from "../../../shared/ui/borderedBlockHeading";
 import { Tag } from "../../../shared/ui/tag";
 import { ArrowRight } from "lucide-react";
 import { SmallHeading } from "../../../shared/ui/smallHeading";

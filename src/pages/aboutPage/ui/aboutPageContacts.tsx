@@ -1,6 +1,5 @@
 import type { FC } from "react";
-import { BorderedBlock } from "../../../shared/ui/borderedBlock";
-import { BorderedBlockHeading } from "../../../shared/ui/borderedBlockHeading";
+import { BorderedBlock, BorderedBlockHeading } from "../../../shared/ui/borderedBlock";
 import { SecondaryText } from "../../../shared/ui/secondaryText";
 import { Mail, MapPin, Phone } from "lucide-react";
 

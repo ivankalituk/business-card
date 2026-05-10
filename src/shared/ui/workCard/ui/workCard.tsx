@@ -33,6 +33,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                     relative
                     overflow-hidden
                     aspect-[4/3]
+                    group/img
                 `, `${type === 'DETAILED' && 'aspect-576/360'}`)}
             >
                 <img 
@@ -45,7 +46,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                         object-cover
                         overflow-hidden
                         transition-transform duration-700 group-hover:scale-105
-                    `, `${type === 'DETAILED' && 'aspect-576/360 hover:scale-105'}`)}
+                    `, `${type === 'DETAILED' && 'aspect-576/360 hover:scale-105 cursor-pointer'}`)}
                 />
 
                 <div 
@@ -54,11 +55,33 @@ const WorkCard: FC <Props> = ({type}) =>{
                         bottom-[0px]
                         h-[30px]
                         w-full
+                        z-20
                         bg-gradient-to-t
                         from-card
                         to-transparent
                     "
                 />
+
+                {type === 'DETAILED' && <div 
+                    className="
+                        pointer-events-none
+                        absolute
+                        z-10
+                        w-[100%]
+                        h-[100%]
+                        top-[0px]
+                        left-[0px]
+                        bg-background/70
+                        opacity-0
+                        transition-opacity
+                        duration-300
+                        group-hover/img:opacity-100
+                    " 
+                >
+                    <div className="flex items-center justify-around w-[100%] h-[100%]">
+                        View Images
+                    </div>
+                </div>}
             </div>
 
             <div

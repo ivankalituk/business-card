@@ -18,6 +18,9 @@ const DetailedCardLink: FC <Props> = ({type, link}) => {
                     items-center
                     text-[14px]
                     p-[8px]
+                    transition-colors
+                    duration-300
+                    hover:text-foreground
                 "
             >
                 {type === 'LINK' && <ExternalLink height={16}/>}

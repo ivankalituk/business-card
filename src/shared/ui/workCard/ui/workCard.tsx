@@ -3,11 +3,10 @@ import sampleImage from '../../../assets/images/amar-guillen-photographiing-deat
 import { Tag } from "../../tag";
 import { ArrowUpRight } from "lucide-react";
 import { SecondaryText } from "../../secondaryText";
-import { ExternalLink, FileText } from 'lucide-react';
-import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import { BigHeading } from "../../bigHeading";
 import { SmallHeading } from "../../smallHeading";
+import DetailedCardLink from "./detailedCardLinks";
 
 interface Props{
     type: 'SMALL' | 'DETAILED'
@@ -140,33 +139,8 @@ const WorkCard: FC <Props> = ({type}) =>{
                 </div>}
 
                 {type === 'DETAILED' && <div className="flex gap-[8px] mt-[20px]">
-                    <Link to={'/'}>
-                        <SecondaryText 
-                            className="
-                                flex gap-[8px]
-                                items-center
-                                text-[14px]
-                                p-[8px]
-                            "
-                        >
-                            <ExternalLink height={16}/>
-                            <span>Live</span>
-                        </SecondaryText>
-                    </Link>
-
-                    <Link to={'/'}>
-                        <SecondaryText
-                            className="
-                                flex gap-[8px]
-                                items-center
-                                text-[14px]
-                                p-[8px]
-                            "
-                        >
-                            <FileText height={16}/>
-                            <span>Github</span>
-                        </SecondaryText>
-                    </Link>
+                    <DetailedCardLink type='LINK' link="/"/>
+                    <DetailedCardLink type='TEXT' link="/"/>
                 </div>
                 }
             </div>

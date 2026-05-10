@@ -26,8 +26,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                 rounded-[16px]
                 overflow-hidden
                 vessel-shadow
-                group
-                `,`${type === 'DETAILED' && 'aspect-576/638'}`)}
+            `,`${type === 'DETAILED' && 'aspect-576/638'} ${type === 'SMALL' && 'group'}`)}
         >
             <div
                 className={twMerge(`
@@ -46,7 +45,7 @@ const WorkCard: FC <Props> = ({type}) =>{
                         object-cover
                         overflow-hidden
                         transition-transform duration-700 group-hover:scale-105
-                    `, `${type === 'DETAILED' && 'aspect-576/360'}`)}
+                    `, `${type === 'DETAILED' && 'aspect-576/360 hover:scale-105'}`)}
                 />
 
                 <div 

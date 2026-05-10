@@ -2,7 +2,12 @@ import type { FC } from "react";
 import sampleImage from '../../../assets/images/amar-guillen-photographiing-death-valley.jpg'
 import { Tag } from "../../tag";
 import { ArrowUpRight } from "lucide-react";
-
+import { SecondaryText } from "../../secondaryText";
+import { ExternalLink, FileText } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
+import { BigHeading } from "../../bigHeading";
+import { SmallHeading } from "../../smallHeading";
 
 interface Props{
     type: 'SMALL' | 'DETAILED'
@@ -12,10 +17,9 @@ const WorkCard: FC <Props> = ({type}) =>{
     
     return(
         <div
-            className="
+            className={twMerge(`
                 text-foreground
                 aspect-[380/512]
-                max-w-[380px]
                 w-[100%]
                 bg-card
                 glass-border
@@ -23,26 +27,26 @@ const WorkCard: FC <Props> = ({type}) =>{
                 overflow-hidden
                 vessel-shadow
                 group
-            "
+                `,`${type === 'DETAILED' && 'aspect-576/638'}`)}
         >
             <div
-                className="
+                className={twMerge(`
                     relative
                     overflow-hidden
                     aspect-[4/3]
-                "
+                `, `${type === 'DETAILED' && 'aspect-576/360'}`)}
             >
                 <img 
                     src={sampleImage} 
                     alt="workImage"
-                    className="
+                    className={twMerge(`
                         scale-101
                         aspect-[4/3]
                         w-[100%]
                         object-cover
                         overflow-hidden
                         transition-transform duration-700 group-hover:scale-105
-                    " 
+                    `, `${type === 'DETAILED' && 'aspect-576/360'}`)}
                 />
 
                 <div 
@@ -70,39 +74,16 @@ const WorkCard: FC <Props> = ({type}) =>{
                         items-center
                     "
                 >
-                    <div
-                        className="
-                            text-foreground
-                            font-inter
-                            font-[20px]
-                            font-[600]
-                        "
-                    >
-                        Project Name
-                    </div>
-                    
-                    <div
-                        className="
-                            font-mono
-                            text-[12px]
-                            text-muted-foreground
-                        "
-                    >
-                        2026
-                    </div>
+                    <BigHeading className="text-[20px] font-[600]">Project Name</BigHeading>
+                    <SmallHeading className="text-12px text-muted-foreground  tracking-[0em]">2026</SmallHeading>
+
                 </div>
 
-                <div
-                    className="
-                        text-muted-foreground
-                        mt-[12px]
-                        font-inter
-                        text-[14px]
-                    "
-                >
+
+                <SecondaryText className="mt-[12px] text-[14px]">
                     Enterprise analytics platform 
                     with real-time data visualization
-                </div>
+                </SecondaryText>
 
                 <div
                     className="
@@ -136,8 +117,34 @@ const WorkCard: FC <Props> = ({type}) =>{
                     />
                 </div>}
 
-                {type === 'DETAILED' && <div>
-                    some code links
+                {type === 'DETAILED' && <div className="flex gap-[8px] mt-[20px]">
+                    <Link to={'/'}>
+                        <SecondaryText 
+                            className="
+                                flex gap-[8px]
+                                items-center
+                                text-[14px]
+                                p-[8px]
+                            "
+                        >
+                            <ExternalLink height={16}/>
+                            <span>Live</span>
+                        </SecondaryText>
+                    </Link>
+
+                    <Link to={'/'}>
+                        <SecondaryText
+                            className="
+                                flex gap-[8px]
+                                items-center
+                                text-[14px]
+                                p-[8px]
+                            "
+                        >
+                            <FileText height={16}/>
+                            <span>Github</span>
+                        </SecondaryText>
+                    </Link>
                 </div>
                 }
             </div>

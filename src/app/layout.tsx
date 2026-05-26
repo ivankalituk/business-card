@@ -20,12 +20,11 @@ const Layout: FC = () => {
                 <main className="
                     max-w-[1184px]
                     w-[100%]
-                    px-[10px]
+                    px-[24px]
                     mx-auto
                     mb-[40px]
 
-                    sm:px-[20px]
-                    md:px-[40px]
+                    md:px-[48px]
                 ">
                     <Outlet />
                 </main>

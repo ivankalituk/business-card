@@ -6,14 +6,17 @@ import { WorkCard } from "../../../shared/ui/workCard"
 const WorksPage = () => {
     return(
         <div
-            className="pt-[128px] pb-[208px]"
+            className="
+                pt-[60px] pb-[256px]
+                md:pt-[128px]
+            "
         >
             <div>
                 <SmallHeading className="mb-[12px]">
                     Archive
                 </SmallHeading>
 
-                <BigHeading className="text-[48px] mb-[20px]">
+                <BigHeading className="text-[30px] td:text-[48px] mb-[20px]">
                     All Works
                 </BigHeading>
 
@@ -24,7 +27,7 @@ const WorksPage = () => {
             </div>
             
             <div 
-                className="grid grid-cols-2 gap-[32px]"
+                className="grid grid-cols-1 gap-[24px] dt:gap[32px] dt:grid-cols-2"
             >
                 <WorkCard type='DETAILED'/>
                 <WorkCard type='DETAILED'/>

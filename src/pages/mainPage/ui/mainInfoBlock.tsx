@@ -15,15 +15,16 @@ const MainInfoBlock: FC = () => {
                 flex flex-col
             "
         >
-            <SmallHeading className="mb-[24px]">
+            <SmallHeading 
+                className="mb-[24px]">
                 junior fullstack developer
             </SmallHeading>
 
-            <BigHeading className="mb-[32px]">
+            <BigHeading className="mb-[32px] text-[42px] td:text-[96px]">
                 Ivan Kalitiuk
             </BigHeading>
 
-            <SecondaryText className="max-w-[600px] mb-[40px]">
+            <SecondaryText className="max-w-[600px] mb-[40px] text-[18px] td:text-[20px]">
                 Crafting digital experiences at the intersection of design and engineering
             </SecondaryText>
 
@@ -49,7 +50,7 @@ const MainInfoBlock: FC = () => {
                     md:flex-row
                 "
             >
-                <BorderedBlock className="flex-[3]">
+                <BorderedBlock className="flex-[3] p-[24px] md:p-[32px]">
                     <BorderedBlockHeading name="Background"/>
 
                     <div
@@ -76,7 +77,7 @@ const MainInfoBlock: FC = () => {
                     </div>
                 </BorderedBlock>
                 
-                <BorderedBlock className="flex-[2]">
+                <BorderedBlock className="flex-[2] p-[24px] md:p-[32px]">
                     <BorderedBlockHeading name = "Experience"/>
 
                     <BorderedBlockCompany />

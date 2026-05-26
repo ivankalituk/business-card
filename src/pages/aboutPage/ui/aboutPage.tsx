@@ -10,8 +10,11 @@ const AboutPage = () => {
         <div 
             className="
                 relative
-                mt-[128px] mb-[208px]
+                mt-[0px] mb-[208px]
+                td:mt-[128px]
                 flex gap-[32px]
+                flex-col
+                td:flex-row
                 text-foreground
             "
         >

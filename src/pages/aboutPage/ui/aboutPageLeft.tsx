@@ -8,8 +8,9 @@ const AboutPageLeft: FC = () => {
     return(
         <div
             className="
-                max-w-[300px]
-                sticky
+                max-w-[100%]
+                td:max-w-[300px]
+                td:sticky
                 top-[100px]
                 self-start
             "

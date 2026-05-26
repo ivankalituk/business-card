@@ -15,7 +15,7 @@ const AboutPageContacts: FC = () =>{
 }
 
     return(
-        <BorderedBlock>
+        <BorderedBlock className="p-[24px] md:p-[32px]">
             <BorderedBlockHeading name='Contact' />
 
                 <div className='grid grid-cols-2 gap-[16px]' onClick={handleCopy}>

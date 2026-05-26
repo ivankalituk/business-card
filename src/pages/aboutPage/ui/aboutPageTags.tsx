@@ -9,7 +9,7 @@ const AboutPageTags: FC = () => {
                 Skills & Expertise
             </SmallHeading>
             
-            <div className='flex gap-[8px]'>
+            <div className='flex gap-[8px] flex-wrap'>
                 <Tag name='REACT'/>
                 <Tag name='Next.js'/>
                 <Tag name='Nest.js'/>

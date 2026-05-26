@@ -11,7 +11,7 @@ const AboutPageExperience: FC = () =>{
             </SmallHeading>
 
             <div className='flex flex-col gap-[32px]'>
-                <BorderedBlock>
+                <BorderedBlock className="p-[24px] md:p-[32px]">
                     <BoardedBlockTimedContent 
                         heading="Senior Creative Developer"
                         date="2023 — Present"
@@ -20,7 +20,7 @@ const AboutPageExperience: FC = () =>{
                     />
                 </BorderedBlock>
                 
-                <BorderedBlock>
+                <BorderedBlock className="p-[24px] md:p-[32px]">
                     <BoardedBlockTimedContent 
                         heading="Senior Creative Developer"
                         date="2023 — Present"
@@ -29,7 +29,7 @@ const AboutPageExperience: FC = () =>{
                     />
                 </BorderedBlock>
 
-                <BorderedBlock>
+                <BorderedBlock className="p-[24px] md:p-[32px]">
                     <BoardedBlockTimedContent 
                         heading="Senior Creative Developer"
                         date="2023 — Present"

@@ -10,7 +10,7 @@ const AboutPageEducation: FC = () => {
                 Education
             </SmallHeading>
 
-            <BorderedBlock>
+            <BorderedBlock className="p-[24px] md:p-[32px]">
                 <BoardedBlockTimedContent
                     heading="B.S. Computer Science"
                     date="2023 — 2026"

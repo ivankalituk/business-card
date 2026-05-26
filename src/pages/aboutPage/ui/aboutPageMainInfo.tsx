@@ -10,7 +10,7 @@ const AboutPageMainInfo: FC = () => {
                 About
             </SmallHeading>
 
-            <BigHeading className='mb-[24px] text-[60px]'>
+            <BigHeading className='mb-[24px] text-[42px] td:text-[60px]'>
                 Ivan Kalitiuk
             </BigHeading>
 

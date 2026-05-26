@@ -1,6 +1,12 @@
 import type { FC } from "react";
 
-const BorderedBlockCompany: FC = () => {
+interface Props {
+    post: string,
+    date: string,
+    shortDescription: string
+}
+
+const BorderedBlockCompany: FC <Props> = ({post, date, shortDescription}) => {
     return(
         <div 
             className="
@@ -27,15 +33,15 @@ const BorderedBlockCompany: FC = () => {
                         text-[14px]
                     "
                 >
-                    Senior Creative Developer
+                    {post}
                 </div>
 
                 <div>
-                    Freelance
+                    {shortDescription}
                 </div>
             </div>
 
-            <div className="font-mono">2023</div>
+            <div className="font-mono">{date}</div>
         </div>
     )
 }

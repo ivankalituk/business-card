@@ -7,6 +7,8 @@ import { ArrowRight } from "lucide-react";
 import { SmallHeading } from "../../../shared/ui/smallHeading";
 import { BigHeading } from "../../../shared/ui/bigHeading";
 import { SecondaryText } from "../../../shared/ui/secondaryText";
+import { personalData, personalExperience } from "../../../mockData";
+import { Link } from "react-router-dom";
 
 const MainInfoBlock: FC = () => {
     return(
@@ -17,15 +19,15 @@ const MainInfoBlock: FC = () => {
         >
             <SmallHeading 
                 className="mb-[24px]">
-                junior fullstack developer
+                {personalData.post}
             </SmallHeading>
 
             <BigHeading className="mb-[32px] text-[42px] td:text-[96px]">
-                Ivan Kalitiuk
+                {personalData.name}
             </BigHeading>
 
             <SecondaryText className="max-w-[600px] mb-[40px] text-[18px] td:text-[20px]">
-                Crafting digital experiences at the intersection of design and engineering
+                {personalData.shortDescription}
             </SecondaryText>
 
             <div
@@ -35,11 +37,15 @@ const MainInfoBlock: FC = () => {
                     mb-[64px]
                 "
             >
-                <Button type="WHITE" className="flex gap-[8px]">
-                    View Works
-                    <ArrowRight className="w-[16px] h-[16px]" />
-                </Button>
-                <Button type="BLACK">About Me</Button>
+                <Link to='/works'>
+                    <Button type="WHITE" className="flex gap-[8px]">
+                        View Works
+                        <ArrowRight className="w-[16px] h-[16px]" />
+                    </Button>
+                </Link>
+                <Link to='/about'>
+                    <Button type="BLACK">About Me</Button>
+                </Link>
             </div>
             
             <div 
@@ -60,29 +66,29 @@ const MainInfoBlock: FC = () => {
                             leading-[1.625]
                         "
                     >
-                        I'm a creative developer with 8+ years of experience 
-                        building high-end digital products. My work spans 
-                        enterprise dashboards, design systems, and experimental 
-                        web experiences. I believe in the power of thoughtful 
-                        design paired with robust engineering to create 
-                        products that truly resonate.
+                        {personalData.description}
                     </div>
 
                     <div
                         className="
                             mt-[20px]
+                            flex flex-wrap gap-[8px]
                         "
                     >
-                        <Tag name="REACT" />
+                        {personalData.tags.map((tag) => (
+                            <Tag name={tag} />
+                        ))}
                     </div>
                 </BorderedBlock>
                 
                 <BorderedBlock className="flex-[2] p-[24px] md:p-[32px]">
                     <BorderedBlockHeading name = "Experience"/>
 
-                    <BorderedBlockCompany />
-                    <BorderedBlockCompany />
-                    <BorderedBlockCompany />
+
+                    {personalExperience.map((item) => (
+                        <BorderedBlockCompany date={item.date} post={item.post} shortDescription={item.shortDescription}/>
+                    ))}
+
                     
                 </BorderedBlock>
             </div>

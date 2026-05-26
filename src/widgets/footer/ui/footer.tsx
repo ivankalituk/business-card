@@ -18,6 +18,9 @@ const Footer = () => {
                     w-[100%]
                     p-[48px]
                     flex
+                    flex-col
+                    td:flex-row
+                    gap-[16px]
                     items-center
                     justify-between
                 "

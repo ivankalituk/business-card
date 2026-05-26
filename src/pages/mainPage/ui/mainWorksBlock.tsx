@@ -46,6 +46,8 @@ const MainWorksBlock: FC = () => {
             <div
                 className="
                     flex
+                    flex-col
+                    md:flex-row
                     gap-[16px]
                 "
             >

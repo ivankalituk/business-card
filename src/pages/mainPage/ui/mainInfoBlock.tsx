@@ -44,7 +44,9 @@ const MainInfoBlock: FC = () => {
             <div 
                 className="
                     flex
+                    flex-col
                     gap-[16px]
+                    md:flex-row
                 "
             >
                 <BorderedBlock className="flex-[3]">

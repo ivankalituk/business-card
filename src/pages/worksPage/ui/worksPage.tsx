@@ -27,7 +27,7 @@ const WorksPage = () => {
             </div>
             
             <div 
-                className="grid grid-cols-1 gap-[24px] dt:gap[32px] dt:grid-cols-2"
+                className="grid grid-cols-1 gap-[24px] td:gap[32px] td:grid-cols-2"
             >
                 <WorkCard type='DETAILED'/>
                 <WorkCard type='DETAILED'/>

@@ -1,22 +1,19 @@
 import type { FC } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-
-const navLinks = [
-    { label: 'Home', path: '/' },
-    { label: 'Works', path: '/works' },
-    { label: 'About', path: '/about' },
-];
+import { twMerge } from "tailwind-merge";
+import { navLinks } from "../../../../mockData";
 
 interface Props {
     underLines?: boolean
+    classname?: string
 }
 
-const LayoutLinks: FC <Props> = ({underLines}) => {
+const LayoutLinks: FC <Props> = ({underLines, classname}) => {
     const location = useLocation();
 
     return (
-        <nav className="flex gap-[40px]">
+        <nav className={twMerge(`flex gap-[40px]`, classname)}>
             {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
 
